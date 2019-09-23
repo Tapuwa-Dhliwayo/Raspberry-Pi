@@ -13,10 +13,12 @@ errno.h
 -
 unistd.h
 -
-accMagApp.h
-/home/pi/TestingSensors/src/ACCMAG/accMagApp.h
+accMagGyroSensor.h
+/home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.h
 pigpio.h
 -
 
-/home/pi/TestingSensors/src/ACCMAG/accMagApp.h
+/home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.h
+stdint.h
+-
 

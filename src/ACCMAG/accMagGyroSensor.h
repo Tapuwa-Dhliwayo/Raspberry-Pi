@@ -1,18 +1,23 @@
-//Sensor definitions required to setup FXOS8700
+#ifndef _ACCMAGGYROSENSOR_H_
+#define _ACCMAGGRYOSENSOR_H_
 
-#ifndef _ACCMAGAPP_H_
-#define _ACCMAGAPP_H_
+#include <stdint.h>
 
-#define SENSOR1 0x1F //FXOS8700
+#define SENSOR1 		    0x1F //FXOS8700
 #define SENSOR1_ID                  0xC7 //FXOS8700 ID
 #define SENSOR2                     0x21 //FXAS21002
 #define SENSOR2_ID                  0xD7 //FXAS21002 ID
 
 //Sensor value scaling constants
+#define ACCEL_MG_LSB_2G 	    0.000244F
+#define ACCEL_MG_LSB_4G 	    0.000488F
 #define ACCEL_MG_LSB_8G             0.000976F
 #define MAG_UT_LSB                  0.1F
 #define SENSORS_GRAVITY_STANDARD    9.80665F
+#define GYRO_SENSITIVITY_250DPS	    0.0078125F
+#define GYRO_SENSITIVITY_500DPS     0.015625F
 #define GYRO_SENSITIVITY_1000DPS    0.03125F
+#define GYRO_SENSITIVITY_2000DPS    0.0625F
 #define SENSORS_DPS_TO_RADS         0.017453293F
 
 //Function definitions
@@ -62,7 +67,14 @@ typedef struct
       int16_t x;    /**< Raw int16_t value from the x axis */
       int16_t y;    /**< Raw int16_t value from the y axis */
       int16_t z;    /**< Raw int16_t value from the z axis */
-    } fxos8700RawData_t;
+    } rawData_t;
+//GYROSCOPE Raw data struct
+typedef struct
+    {
+      float x;    /**< Raw int16_t value from the x axis */
+      float y;    /**< Raw int16_t value from the y axis */
+      float z;    /**< Raw int16_t value from the z axis */
+    } sensorValue_t;
 
 //Registers for FXAS21002 Sensor 2
 typedef enum
@@ -88,5 +100,8 @@ typedef enum
       GYRO_RANGE_1000DPS = 1000,    /**< 1000dps */
       GYRO_RANGE_2000DPS = 2000     /**< 2000dps */
     } gyroRange_t;
+
+void accel_function(int sensitivity, rawData_t* data1, rawData_t* data2, sensorValue_t* processed1, sensorValue_t* processed2 );
+void gyro_function(int sensitivity, rawData_t* data, sensorValue_t* processed);
 
 #endif

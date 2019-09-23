@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/accMagApp.dir/accMagApp.cpp.o"
+  "CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.o"
+  "CMakeFiles/accMagApp.dir/huff.cpp.o"
+  "CMakeFiles/accMagApp.dir/clogger.cpp.o"
   "accMagApp.pdb"
   "accMagApp"
 )

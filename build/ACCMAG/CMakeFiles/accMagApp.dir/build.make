@@ -70,19 +70,63 @@ ACCMAG/CMakeFiles/accMagApp.dir/accMagApp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accMagApp.dir/accMagApp.cpp.s"
 	cd /home/pi/TestingSensors/build/ACCMAG && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/TestingSensors/src/ACCMAG/accMagApp.cpp -o CMakeFiles/accMagApp.dir/accMagApp.cpp.s
 
+ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.o: ACCMAG/CMakeFiles/accMagApp.dir/flags.make
+ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.o: /home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/TestingSensors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.o"
+	cd /home/pi/TestingSensors/build/ACCMAG && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.o -c /home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.cpp
+
+ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.i"
+	cd /home/pi/TestingSensors/build/ACCMAG && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.cpp > CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.i
+
+ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.s"
+	cd /home/pi/TestingSensors/build/ACCMAG && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.cpp -o CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.s
+
+ACCMAG/CMakeFiles/accMagApp.dir/huff.cpp.o: ACCMAG/CMakeFiles/accMagApp.dir/flags.make
+ACCMAG/CMakeFiles/accMagApp.dir/huff.cpp.o: /home/pi/TestingSensors/src/ACCMAG/huff.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/TestingSensors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object ACCMAG/CMakeFiles/accMagApp.dir/huff.cpp.o"
+	cd /home/pi/TestingSensors/build/ACCMAG && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accMagApp.dir/huff.cpp.o -c /home/pi/TestingSensors/src/ACCMAG/huff.cpp
+
+ACCMAG/CMakeFiles/accMagApp.dir/huff.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/accMagApp.dir/huff.cpp.i"
+	cd /home/pi/TestingSensors/build/ACCMAG && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/TestingSensors/src/ACCMAG/huff.cpp > CMakeFiles/accMagApp.dir/huff.cpp.i
+
+ACCMAG/CMakeFiles/accMagApp.dir/huff.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accMagApp.dir/huff.cpp.s"
+	cd /home/pi/TestingSensors/build/ACCMAG && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/TestingSensors/src/ACCMAG/huff.cpp -o CMakeFiles/accMagApp.dir/huff.cpp.s
+
+ACCMAG/CMakeFiles/accMagApp.dir/clogger.cpp.o: ACCMAG/CMakeFiles/accMagApp.dir/flags.make
+ACCMAG/CMakeFiles/accMagApp.dir/clogger.cpp.o: /home/pi/TestingSensors/src/ACCMAG/clogger.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/TestingSensors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object ACCMAG/CMakeFiles/accMagApp.dir/clogger.cpp.o"
+	cd /home/pi/TestingSensors/build/ACCMAG && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/accMagApp.dir/clogger.cpp.o -c /home/pi/TestingSensors/src/ACCMAG/clogger.cpp
+
+ACCMAG/CMakeFiles/accMagApp.dir/clogger.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/accMagApp.dir/clogger.cpp.i"
+	cd /home/pi/TestingSensors/build/ACCMAG && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/TestingSensors/src/ACCMAG/clogger.cpp > CMakeFiles/accMagApp.dir/clogger.cpp.i
+
+ACCMAG/CMakeFiles/accMagApp.dir/clogger.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/accMagApp.dir/clogger.cpp.s"
+	cd /home/pi/TestingSensors/build/ACCMAG && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/TestingSensors/src/ACCMAG/clogger.cpp -o CMakeFiles/accMagApp.dir/clogger.cpp.s
+
 # Object files for target accMagApp
 accMagApp_OBJECTS = \
-"CMakeFiles/accMagApp.dir/accMagApp.cpp.o"
+"CMakeFiles/accMagApp.dir/accMagApp.cpp.o" \
+"CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.o" \
+"CMakeFiles/accMagApp.dir/huff.cpp.o" \
+"CMakeFiles/accMagApp.dir/clogger.cpp.o"
 
 # External object files for target accMagApp
 accMagApp_EXTERNAL_OBJECTS =
 
 ACCMAG/accMagApp: ACCMAG/CMakeFiles/accMagApp.dir/accMagApp.cpp.o
+ACCMAG/accMagApp: ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.o
+ACCMAG/accMagApp: ACCMAG/CMakeFiles/accMagApp.dir/huff.cpp.o
+ACCMAG/accMagApp: ACCMAG/CMakeFiles/accMagApp.dir/clogger.cpp.o
 ACCMAG/accMagApp: ACCMAG/CMakeFiles/accMagApp.dir/build.make
 ACCMAG/accMagApp: /usr/lib/libpigpio.so
-ACCMAG/accMagApp: /usr/lib/libwiringPi.so
 ACCMAG/accMagApp: ACCMAG/CMakeFiles/accMagApp.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/TestingSensors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable accMagApp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/TestingSensors/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable accMagApp"
 	cd /home/pi/TestingSensors/build/ACCMAG && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/accMagApp.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

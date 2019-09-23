@@ -152,6 +152,87 @@ accMagApp.cpp.s:
 	cd /home/pi/TestingSensors/build && $(MAKE) -f ACCMAG/CMakeFiles/accMagApp.dir/build.make ACCMAG/CMakeFiles/accMagApp.dir/accMagApp.cpp.s
 .PHONY : accMagApp.cpp.s
 
+accMagGyroSensor.o: accMagGyroSensor.cpp.o
+
+.PHONY : accMagGyroSensor.o
+
+# target to build an object file
+accMagGyroSensor.cpp.o:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f ACCMAG/CMakeFiles/accMagApp.dir/build.make ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.o
+.PHONY : accMagGyroSensor.cpp.o
+
+accMagGyroSensor.i: accMagGyroSensor.cpp.i
+
+.PHONY : accMagGyroSensor.i
+
+# target to preprocess a source file
+accMagGyroSensor.cpp.i:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f ACCMAG/CMakeFiles/accMagApp.dir/build.make ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.i
+.PHONY : accMagGyroSensor.cpp.i
+
+accMagGyroSensor.s: accMagGyroSensor.cpp.s
+
+.PHONY : accMagGyroSensor.s
+
+# target to generate assembly for a file
+accMagGyroSensor.cpp.s:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f ACCMAG/CMakeFiles/accMagApp.dir/build.make ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.s
+.PHONY : accMagGyroSensor.cpp.s
+
+clogger.o: clogger.cpp.o
+
+.PHONY : clogger.o
+
+# target to build an object file
+clogger.cpp.o:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f ACCMAG/CMakeFiles/accMagApp.dir/build.make ACCMAG/CMakeFiles/accMagApp.dir/clogger.cpp.o
+.PHONY : clogger.cpp.o
+
+clogger.i: clogger.cpp.i
+
+.PHONY : clogger.i
+
+# target to preprocess a source file
+clogger.cpp.i:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f ACCMAG/CMakeFiles/accMagApp.dir/build.make ACCMAG/CMakeFiles/accMagApp.dir/clogger.cpp.i
+.PHONY : clogger.cpp.i
+
+clogger.s: clogger.cpp.s
+
+.PHONY : clogger.s
+
+# target to generate assembly for a file
+clogger.cpp.s:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f ACCMAG/CMakeFiles/accMagApp.dir/build.make ACCMAG/CMakeFiles/accMagApp.dir/clogger.cpp.s
+.PHONY : clogger.cpp.s
+
+huff.o: huff.cpp.o
+
+.PHONY : huff.o
+
+# target to build an object file
+huff.cpp.o:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f ACCMAG/CMakeFiles/accMagApp.dir/build.make ACCMAG/CMakeFiles/accMagApp.dir/huff.cpp.o
+.PHONY : huff.cpp.o
+
+huff.i: huff.cpp.i
+
+.PHONY : huff.i
+
+# target to preprocess a source file
+huff.cpp.i:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f ACCMAG/CMakeFiles/accMagApp.dir/build.make ACCMAG/CMakeFiles/accMagApp.dir/huff.cpp.i
+.PHONY : huff.cpp.i
+
+huff.s: huff.cpp.s
+
+.PHONY : huff.s
+
+# target to generate assembly for a file
+huff.cpp.s:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f ACCMAG/CMakeFiles/accMagApp.dir/build.make ACCMAG/CMakeFiles/accMagApp.dir/huff.cpp.s
+.PHONY : huff.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -164,6 +245,15 @@ help:
 	@echo "... accMagApp.o"
 	@echo "... accMagApp.i"
 	@echo "... accMagApp.s"
+	@echo "... accMagGyroSensor.o"
+	@echo "... accMagGyroSensor.i"
+	@echo "... accMagGyroSensor.s"
+	@echo "... clogger.o"
+	@echo "... clogger.i"
+	@echo "... clogger.s"
+	@echo "... huff.o"
+	@echo "... huff.i"
+	@echo "... huff.s"
 .PHONY : help
 
 

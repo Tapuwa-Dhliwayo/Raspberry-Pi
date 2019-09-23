@@ -5,14 +5,13 @@ if(COMMAND cmake_policy)
 endif(COMMAND cmake_policy)
 
 find_package(pigpio REQUIRED)
-find_library(wiringPi_LIB wiringPi)
 
 set(EXECNAME accMagApp)
 
-SET(SRCS accMagApp.cpp)
+SET(SRCS accMagApp.cpp accMagGyroSensor.cpp huff.cpp clogger.cpp)
 
 include_directories( ${pigpio_INCLUDE_DIRS})
 
 add_executable(${EXECNAME} ${SRCS})
 
-target_link_libraries(${EXECNAME} ${pigpio_LIBRARY} ${wiringPi_LIB})
+target_link_libraries(${EXECNAME} ${pigpio_LIBRARY})
