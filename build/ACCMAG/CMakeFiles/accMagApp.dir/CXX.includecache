@@ -11,6 +11,8 @@ iostream
 -
 errno.h
 -
+unistd.h
+-
 accMagApp.h
 /home/pi/TestingSensors/src/ACCMAG/accMagApp.h
 pigpio.h

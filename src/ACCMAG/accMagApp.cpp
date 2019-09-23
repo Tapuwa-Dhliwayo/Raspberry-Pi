@@ -1,5 +1,6 @@
 #include <iostream>
 #include <errno.h>
+#include <unistd.h>
 #include "accMagApp.h" //FXO8700 definitions required for setting up the sensor
 #include <pigpio.h>
 
@@ -24,7 +25,7 @@ int main(){
 
 void accel_function(){
 	
-	char *buffer;
+	char buffer[13];
 	
 	//Open up the i2c device FXOS8700
 	int handle = i2cOpen(1,SENSOR1,0);
@@ -35,7 +36,7 @@ void accel_function(){
 		cout << "There is an error with the device" <<endl;
 		temp = i2cClose(handle);
 		gpioTerminate();
-		return 0;
+		return ;
 	}
 	//Set device to standby mode : Enables data readings
 	i2cWriteWordData(handle,FXOS8700_REGISTER_CTRL_REG1,0);
@@ -86,7 +87,7 @@ void accel_function(){
 
 void gyro_function(){
 	
-	char *buffer;
+	char buffer[7];
 
 	//Open up the i2c device FXAS21002
 	int handle = i2cOpen(1,SENSOR2,0);
@@ -97,18 +98,18 @@ void gyro_function(){
 		cout << "There is an error with the device" <<endl;
 		temp = i2cClose(handle);
 		gpioTerminate();
-		return 0;
+		return ;
 	}
 	//Setting CTRL_REG : 1000DPS in this case
 	uint8_t ctrlReg0 = 0x01;
 	
 	//Configuring Sensor
 	/* Reset then switch to active mode with 100Hz output */
-  	i2cWriteWordData(GYRO_REGISTER_CTRL_REG1, 0x00);     // Standby
- 	i2cWriteWordData(GYRO_REGISTER_CTRL_REG1, (1<<6));   // Reset
-  	i2cWriteWordData(GYRO_REGISTER_CTRL_REG0, ctrlReg0); // Set sensitivity
-  	i2cWriteWordData(GYRO_REGISTER_CTRL_REG1, 0x0E);     // Active
-	delay(100);
+  	i2cWriteWordData(handle,GYRO_REGISTER_CTRL_REG1, 0x00);     // Standby
+ 	i2cWriteWordData(handle,GYRO_REGISTER_CTRL_REG1, (1<<6));   // Reset
+  	i2cWriteWordData(handle,GYRO_REGISTER_CTRL_REG0, ctrlReg0); // Set sensitivity
+  	i2cWriteWordData(handle,GYRO_REGISTER_CTRL_REG1, 0x0E);     // Active
+	//sleep(100);
 	
 	temp = i2cReadDevice(handle,buffer,7);
 	
@@ -125,7 +126,7 @@ void gyro_function(){
 	gyro_z *= SENSORS_DPS_TO_RADS;
 	
 	cout << gyro_x << endl;
-	Cout << gyro_y << endl;
+	cout << gyro_y << endl;
 	cout << gyro_z << endl;
 	
 	temp = i2cClose(handle);
