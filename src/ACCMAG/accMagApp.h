@@ -5,11 +5,14 @@
 
 #define SENSOR1 0x1F //FXOS8700
 #define SENSOR1_ID 0xC7 //FXOS8700 ID
+#define SENSOR2 0x21 //FXAS21002
+#define SENSOR2_ID 0xD7 //FXAS21002 ID
 
 //Sensor value scaling constants
 #define ACCEL_MG_LSB_8G 0.000976F
 #define MAG_UT_LSB 0.1F
 #define SENSORS_GRAVITY_STANDARD 9.80665F
+#define GYRO_SENSITIVITY_1000DPS 0.03125F
 
 //Registers for the FXOS8700 Sensor 1
 typedef enum
@@ -56,5 +59,29 @@ typedef struct
       int16_t z;    /**< Raw int16_t value from the z axis */
     } fxos8700RawData_t;
 
+//Registers for FXAS21002 Sensor 2
+typedef enum
+    {
+      GYRO_REGISTER_STATUS              = 0x00, /**< 0x00 */
+      GYRO_REGISTER_OUT_X_MSB           = 0x01, /**< 0x01 */
+      GYRO_REGISTER_OUT_X_LSB           = 0x02, /**< 0x02 */
+      GYRO_REGISTER_OUT_Y_MSB           = 0x03, /**< 0x03 */
+      GYRO_REGISTER_OUT_Y_LSB           = 0x04, /**< 0x04 */
+      GYRO_REGISTER_OUT_Z_MSB           = 0x05, /**< 0x05 */
+      GYRO_REGISTER_OUT_Z_LSB           = 0x06, /**< 0x06 */
+      GYRO_REGISTER_WHO_AM_I            = 0x0C, /**< 0x0C (default value = 0b11010111, read only) */
+      GYRO_REGISTER_CTRL_REG0           = 0x0D, /**< 0x0D (default value = 0b00000000, read/write) */
+      GYRO_REGISTER_CTRL_REG1           = 0x13, /**< 0x13 (default value = 0b00000000, read/write) */
+      GYRO_REGISTER_CTRL_REG2           = 0x14, /**< 0x14 (default value = 0b00000000, read/write) */
+    } gyroRegisters_t;
+
+//Optionally Speed settings for Gyro
+typedef enum
+    {
+      GYRO_RANGE_250DPS  = 250,     /**< 250dps */
+      GYRO_RANGE_500DPS  = 500,     /**< 500dps */
+      GYRO_RANGE_1000DPS = 1000,    /**< 1000dps */
+      GYRO_RANGE_2000DPS = 2000     /**< 2000dps */
+    } gyroRange_t;
 
 #endif
