@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/TestingSensors/src/ACCMAG/accMagApp.cpp
+iostream
+-
+errno.h
+-
+accMagApp.h
+/home/pi/TestingSensors/src/ACCMAG/accMagApp.h
+pigpio.h
+-
+
+/home/pi/TestingSensors/src/ACCMAG/accMagApp.h
+
