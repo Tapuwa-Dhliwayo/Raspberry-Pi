@@ -4,15 +4,16 @@
 #define _ACCMAGAPP_H_
 
 #define SENSOR1 0x1F //FXOS8700
-#define SENSOR1_ID 0xC7 //FXOS8700 ID
-#define SENSOR2 0x21 //FXAS21002
-#define SENSOR2_ID 0xD7 //FXAS21002 ID
+#define SENSOR1_ID                  0xC7 //FXOS8700 ID
+#define SENSOR2                     0x21 //FXAS21002
+#define SENSOR2_ID                  0xD7 //FXAS21002 ID
 
 //Sensor value scaling constants
-#define ACCEL_MG_LSB_8G 0.000976F
-#define MAG_UT_LSB 0.1F
-#define SENSORS_GRAVITY_STANDARD 9.80665F
-#define GYRO_SENSITIVITY_1000DPS 0.03125F
+#define ACCEL_MG_LSB_8G             0.000976F
+#define MAG_UT_LSB                  0.1F
+#define SENSORS_GRAVITY_STANDARD    9.80665F
+#define GYRO_SENSITIVITY_1000DPS    0.03125F
+#define SENSORS_DPS_TO_RADS         0.017453293F
 
 //Function definitions
 void accel_function();
