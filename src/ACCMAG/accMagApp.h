@@ -14,6 +14,10 @@
 #define SENSORS_GRAVITY_STANDARD 9.80665F
 #define GYRO_SENSITIVITY_1000DPS 0.03125F
 
+//Function definitions
+void accel_function();
+void gyro_function();
+
 //Registers for the FXOS8700 Sensor 1
 typedef enum
 {
