@@ -25,7 +25,7 @@ void compress(std::string filename){
 	HuffmanTree tree(freq_table);
 	std::unordered_map<char , std::string > code_table = tree.code();
 	std::string encoded_data = encoder(char_vector,code_table);
-	writer(filename+"_compressed",encoded_data,code_table);
+	writer(filename+"_compressed",encoded_data,freq_table);
 
 }
 

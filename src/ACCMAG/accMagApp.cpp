@@ -23,6 +23,7 @@ int main(){
 	cin >> acc >> gyro;
 	*/
 	cout <<"Accel Sensitivity: " << acc << " Gyro Sensitivity: " << gyro << endl;
+	/*
 	gpioCfgSetInternals(1<<10);
 	gpioInitialise();
 
@@ -32,9 +33,9 @@ int main(){
 	gpioTerminate();
 
 	clogger("testing",&accel_raw,&accel_values);
-	compress("testing");
+	*/compress("testing");
 	
-	
+	decoder("testing_compressed");
 	/*
 	cout << "Accel Processed" << endl;
 	printf("X: %f \n",accel_values.x);

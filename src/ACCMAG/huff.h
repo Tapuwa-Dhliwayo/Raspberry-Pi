@@ -23,8 +23,10 @@ std::unordered_map<char, int> freq_generator(std::vector<char> characters);
 std::string encoder(std::vector<char> charater_order, std::unordered_map<char , std::string> code_table);
 
 //Generates a hdr file with code table and txt file with encoded data
-void writer(std::string output, std::string encoded_data,std::unordered_map<char , std::string> code_table);
+void writer(std::string output, std::string encoded_data,std::unordered_map<char , int> freq_table);
 
+//Decoder function from reconstructing original file
+void decoder(std::string filename);
 //Node structure for building the HuffmanTree
 struct HuffmanNode{
 

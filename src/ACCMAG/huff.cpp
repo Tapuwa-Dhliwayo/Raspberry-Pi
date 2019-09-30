@@ -16,11 +16,12 @@ std::vector<char> char_reader(std::string input){
 	if(!file){
 		std::cout<<"File could not be opened."<<std::endl;
 	}
-	//Writes charatcers in the file into the char vector ignores all spaces tabs and newlines and generates a continuous stream of text as a vector of chars
+	//Writes charatcers in the file into the char vector doesn't ignore white spaces tabs and newlines and generates a continuous stream of text as a vector of chars
 	std::vector<char> characters;
 	while(!file.eof()){
 
-		file>>hold>>std::ws;
+		file >> std::noskipws;
+		file>>hold;
 		characters.push_back(hold);
 
 	}
@@ -64,7 +65,7 @@ std::string encoder(std::vector<char> charater_order, std::unordered_map<char , 
 	//and writing the matching code to the present char in the loop if they match
 
 	for(auto& order: charater_order){
-		
+
 		for(auto& trace: code_table){
 
 			if(order == trace.first){
@@ -78,14 +79,14 @@ std::string encoder(std::vector<char> charater_order, std::unordered_map<char , 
 
 }
 
-void writer(std::string output, std::string encoded_data, std::unordered_map<char , std::string> code_table){
+void writer(std::string output, std::string encoded_data, std::unordered_map<char , int> freq_table){
 
 	int len = encoded_data.length();
 	char buffer[len + 1];
 	//Byte array - buffer of the encoded data has been generated
 	strcpy(buffer, encoded_data.c_str());
 
-	//Writing out the endcoded data array to an output file
+	//Writing out the encoded data array to an output file
 	std::ofstream out_file(output,std::ofstream::binary);
 	out_file<<buffer;
 	out_file.close();
@@ -93,14 +94,41 @@ void writer(std::string output, std::string encoded_data, std::unordered_map<cha
 	//Creating a file output.hdr
 	std::string header_name = output + ".hdr";
 
-	//Writes the code table to the hdr file in the form 'char' -> 'code_symbol'
+	//Writes the code table to the hdr file in the form 'char' | 'code_symbol'
 	std::ofstream out_file2(header_name);
-	for(auto &code: code_table){
-		out_file2<<code.first<<" -> "<<code.second<<"\n";
+	for(auto &code: freq_table){
+		out_file2<<code.first<<"&"<<code.second<<"&";
 	}
 	out_file2.close();
 
 }
+
+void decoder(std::string filename){
+
+	std::unordered_map<char , int> freq_table;
+	std::ifstream file(filename+".hdr");
+	int swap = 0;
+	char character;
+	char keep;
+	int frequency;
+	while(!file.eof()){
+
+		file>>std::noskipws;
+		file>>character;
+		if(character != '&'){
+			keep = character;
+			swap = 0;
+		}
+		else if(character == '&' && swap == 0){
+			file>>frequency;
+			freq_table.insert(std::make_pair(keep,frequency));
+			swap = 1;
+		}
+	}
+	
+
+}
+
 
 //Huffman Tree implementation
 HuffmanTree::HuffmanTree(){};
