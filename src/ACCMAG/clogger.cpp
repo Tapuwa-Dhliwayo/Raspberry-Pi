@@ -56,11 +56,13 @@ void decoder(std::string filename){
 	std::ifstream file2(filename);
 	std::string encoded_data;
 	std::getline(file2,encoded_data);
-	std::cout<<encoded_data;
-	
 	file2.close();
 	
 	HuffmanTree tree(freq_table);
+	
+	for(int i = 0; i < encoded_data.size(); i++){
+		
+	}
 	
 }
 
