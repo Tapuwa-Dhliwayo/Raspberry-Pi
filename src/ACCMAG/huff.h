@@ -1,39 +1,77 @@
 //Function definitions for Custom logging Application
 //Utilizing Huffman compression for storing logging data
 
+#include <iostream>
+#include <memory>
+#include <queue>
+#include <string>
+#include <fstream>
+#include <unordered_map>
+
 #ifndef _HUFF_H_
 #define _HUFF_H_
 
-#include <string>
-#include <cstdlib>
+//Node structure for building the HuffmanTree
+struct HuffmanNode{
 
-using namespace std;
+	char data;
 
-class Node{
-	unsigned char data;
-	unsigned int freq;
-	unsigned char min;
-	Node* left;
-	Node* right;
-public:
-	Node(){};
-	Node(const Node &n){data = n.data; freq = n.freq; left = n.left; right = n.right;}
-	Node(unsigned char d, unsigned int f): data(d), freq(f), min(d){}
-	Node(Node*, Node*);
-	void fill(string*,string&);
-	bool operator>(const Node &);
+	unsigned freq;
+
+	std::shared_ptr<HuffmanNode> left;
+
+	std::shared_ptr<HuffmanNode> right;
+
+	HuffmanNode(char data, unsigned freq){
+
+		this->data = data;
+		this->freq = freq;
+	}
 
 };
 
-class Heap{
-	Node** minHeap;
-	int heapSize;
+//For comparison of two heap nodes
+struct compare{
+
+	bool operator()(std::shared_ptr<HuffmanNode> l, std::shared_ptr<HuffmanNode> r){
+
+		return(l->freq > r->freq);
+	}
+};
+
+//HuffmanTree class
+class HuffmanTree{
+
+private:
+
+	//Priority queue for building the tree
+	std::priority_queue<std::shared_ptr<HuffmanNode>, std::vector<std::shared_ptr<HuffmanNode>>, compare> minHeap;
+
 public:
-	Heap(){heapSize = 0; minHeap = new Node*[257];}
-	void push(Node*);
-	int size(){return heapSize;}
-	void pop();
-	Node* top(){return minHeap[1];}
+
+	//Default empty
+	HuffmanTree();
+	//Default with intialisation values from unordered_map
+	HuffmanTree(std::unordered_map<char,int> table);
+	//Copy constructor
+	HuffmanTree(const HuffmanTree & H);
+	//Move constructor
+	HuffmanTree(HuffmanTree && H);
+	//Destructor
+	~HuffmanTree();
+
+
+	//Copy operator override
+	HuffmanTree& operator=(const HuffmanTree &H);
+
+	//Move operator override
+	HuffmanTree& operator=(HuffmanTree &&H);
+
+	//Checking state of tree
+	bool isempty();
+
+	//Generates the code table for the tree
+	std::unordered_map<char , std::string > code();
 
 };
 
