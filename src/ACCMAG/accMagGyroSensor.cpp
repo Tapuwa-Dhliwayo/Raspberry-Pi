@@ -1,8 +1,5 @@
-#include <iostream>
-#include <errno.h>
-#include <unistd.h>
+
 #include "accMagGyroSensor.h" //FXOS8700 and FXAS21002 definitions required for setting up the sensor
-#include <pigpio.h>
 
 using namespace std;
 
