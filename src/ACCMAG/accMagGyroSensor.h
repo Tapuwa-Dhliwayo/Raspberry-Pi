@@ -1,7 +1,9 @@
-#ifndef _ACCMAGGYROSENSOR_H_
-#define _ACCMAGGRYOSENSOR_H_
+//Sensor Library for FXOS8700 and FXAS21002 sensors(IMU)
 
 #include <stdint.h>
+
+#ifndef _ACCMAGGYROSENSOR_H_
+#define _ACCMAGGRYOSENSOR_H_
 
 #define SENSOR1 		    0x1F //FXOS8700
 #define SENSOR1_ID                  0xC7 //FXOS8700 ID
