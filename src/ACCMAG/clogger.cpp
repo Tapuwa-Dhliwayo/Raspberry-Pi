@@ -29,3 +29,28 @@ void compress(std::string filename){
 
 }
 
+void decoder(std::string filename){
+
+	std::unordered_map<char , int> freq_table;
+	std::ifstream file(filename+".hdr");
+	int swap = 0;
+	char character;
+	char keep;
+	int frequency;
+	while(!file.eof()){
+
+		file>>std::noskipws;
+		file>>character;
+		if(character != '&'){
+			keep = character;
+			swap = 0;
+		}
+		else if(character == '&' && swap == 0){
+			file>>frequency;
+			freq_table.insert(std::make_pair(keep,frequency));
+			swap = 1;
+		}
+	}
+	
+}
+
