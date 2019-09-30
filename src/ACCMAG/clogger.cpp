@@ -51,6 +51,14 @@ void decoder(std::string filename){
 			swap = 1;
 		}
 	}
+	file.close();
+	
+	std::ifstream file(filename);
+	std::string encoded_data;
+	std::getline(file,encoded_data);
+	std::cout<<encoded_data;
+	
+	HufffmanTree tree(freq_table);
 	
 }
 
