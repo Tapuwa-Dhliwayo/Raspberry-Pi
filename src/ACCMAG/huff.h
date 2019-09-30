@@ -7,9 +7,23 @@
 #include <string>
 #include <fstream>
 #include <unordered_map>
+#include <bits/stdc++.h>
 
 #ifndef _HUFF_H_
 #define _HUFF_H_
+
+//Function declaractions for auxilary functions to be used by HUffman Compression
+//Generates a char vector from a string 
+std::vector<char> char_reader(std::string input);
+
+//Generates an unordered map of chars and their frequencies(how often they occur) in a char vector(input)
+std::unordered_map<char, int> freq_generator(std::vector<char> characters);
+
+//Generates encoded data as a string using unordered map to map characters in char vector 
+std::string encoder(std::vector<char> charater_order, std::unordered_map<char , std::string> code_table);
+
+//Generates a hdr file with code table and txt file with encoded data
+void writer(std::string output, std::string encoded_data,std::unordered_map<char , std::string> code_table);
 
 //Node structure for building the HuffmanTree
 struct HuffmanNode{
