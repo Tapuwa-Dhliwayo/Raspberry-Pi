@@ -1,7 +1,6 @@
 //Logging function utilising huffman algorithm for compression
 
 #include "clogger.h"
-#include "huff.h"
 
 void clogger(std::string filename, rawData_t* data, sensorValue_t* processed){
 
@@ -61,7 +60,7 @@ void decoder(std::string filename){
 	
 	file2.close();
 	
-	HufffmanTree tree(freq_table);
+	HuffmanTree tree(freq_table);
 	
 }
 
