@@ -3,12 +3,8 @@
 
 #include "accMagGyroSensor.h"
 #include "huff.h"
-#include <cstdint>
-#include <cstring>
-#include <fstream>
 #include <string>
 #include <iostream>
-#include <cstdlib>
 
 #ifndef _CLOGGER_H_
 #define _CLOGGER_H_
