@@ -6,19 +6,35 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/TestingSensors/src/ACCMAG/accMagApp.cpp
-iostream
--
-errno.h
--
-unistd.h
--
-accMagGyroSensor.h
-/home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.h
-pigpio.h
--
-
 /home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.h
 stdint.h
+-
+
+/home/pi/TestingSensors/src/ACCMAG/clogger.cpp
+clogger.h
+/home/pi/TestingSensors/src/ACCMAG/clogger.h
+
+/home/pi/TestingSensors/src/ACCMAG/clogger.h
+accMagGyroSensor.h
+/home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.h
+huff.h
+/home/pi/TestingSensors/src/ACCMAG/huff.h
+cstdint
+-
+cstring
+-
+fstream
+-
+string
+-
+iostream
+-
+cstdlib
+-
+
+/home/pi/TestingSensors/src/ACCMAG/huff.h
+string
+-
+cstdlib
 -
 

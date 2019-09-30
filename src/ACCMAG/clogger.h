@@ -8,6 +8,7 @@
 #include "huff.h"
 #include <cstdint>
 #include <cstring>
+#include <fstream>
 #include <string>
 #include <iostream>
 #include <cstdlib>
@@ -16,11 +17,9 @@ using namespace std;
 
 void clogger(string filename, rawData_t* data, sensorValue_t* processed);
 
-void compress();
-void putOut();
-void decompress();
+void compress(string filename);
+void putOut(string fileinput,string fileoutput);
+void decompress(string filename);
 Node* constructHeap();
-unsigned int freqs[256] = {0};
-string codebook[256];
 
 #endif

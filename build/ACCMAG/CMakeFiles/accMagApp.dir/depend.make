@@ -3,6 +3,8 @@
 
 ACCMAG/CMakeFiles/accMagApp.dir/accMagApp.cpp.o: /home/pi/TestingSensors/src/ACCMAG/accMagApp.cpp
 ACCMAG/CMakeFiles/accMagApp.dir/accMagApp.cpp.o: /home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.h
+ACCMAG/CMakeFiles/accMagApp.dir/accMagApp.cpp.o: /home/pi/TestingSensors/src/ACCMAG/clogger.h
+ACCMAG/CMakeFiles/accMagApp.dir/accMagApp.cpp.o: /home/pi/TestingSensors/src/ACCMAG/huff.h
 
 ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.o: /home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.cpp
 ACCMAG/CMakeFiles/accMagApp.dir/accMagGyroSensor.cpp.o: /home/pi/TestingSensors/src/ACCMAG/accMagGyroSensor.h
