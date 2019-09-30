@@ -102,4 +102,116 @@ void writer(std::string output, std::string encoded_data, std::unordered_map<cha
 
 }
 
+//Huffman Tree implementation
+HuffmanTree::HuffmanTree(){};
+
+HuffmanTree::HuffmanTree(std::unordered_map<char,int> table){
+
+	std::shared_ptr<HuffmanNode> left;
+	std::shared_ptr<HuffmanNode> right;
+	std::shared_ptr<HuffmanNode> top;
+
+	//Generates minheap with all the nodes in a simple smalles to largest order
+	for (auto&p: table){
+
+		std::shared_ptr<HuffmanNode> holder = std::make_shared<HuffmanNode>(HuffmanNode(p.first,p.second));
+        minHeap.push(holder); 
+    }
+
+    //This structures the minheap using internal nodes(by adding together nodes) having smaller node on the left and larger node on right
+    while (minHeap.size() != 1) { 
+  
+        left = minHeap.top(); 
+        minHeap.pop(); 
+  
+        right = minHeap.top(); 
+        minHeap.pop(); 
+
+        top = std::make_shared<HuffmanNode>(HuffmanNode('$', left->freq + right->freq)); 
+  
+        top->left = left; 
+        top->right = right; 
+  
+        minHeap.push(top); 
+    }
+	
+}
+ 
+HuffmanTree::HuffmanTree(const HuffmanTree & H):minHeap(H.minHeap){}//std::cout<<"Copy Constructor called."<<std::endl;}
+
+HuffmanTree::HuffmanTree(HuffmanTree && H):minHeap(H.minHeap){
+
+	//Pops out all the elements from minHeap until its empty
+	while(!H.minHeap.empty()){
+		H.minHeap.pop();
+	}
+	//std::cout<<"Move Constructor called."<<std::endl;
+}
+
+HuffmanTree::~HuffmanTree(){};
+
+HuffmanTree& HuffmanTree::operator=(const HuffmanTree& H){
+	
+	//std::cout<<"Copy assignment called."<<std::endl;
+	if(this == &H){
+
+		return *this;
+	}
+
+	minHeap = H.minHeap;
+
+	return *this;
+}
+
+HuffmanTree& HuffmanTree::operator=(HuffmanTree &&H){
+
+	//std::cout<<"Move assignment called."<<std::endl;
+
+	if(this == &H){
+
+		return *this;
+	}
+
+	minHeap = H.minHeap;
+	//Pops out all the elements from minHeap until its empty
+	while(!H.minHeap.empty()){
+		H.minHeap.pop();
+	}
+
+	return *this;
+}
+
+bool HuffmanTree::isempty(){
+
+	return minHeap.empty();
+}
+
+std::unordered_map<char , std::string > HuffmanTree::code(){
+
+	//This creates the code table by tracing the minheap 
+	std::unordered_map<char , std::string > code_table;
+	std::shared_ptr<HuffmanNode> root = minHeap.top();
+	std::string str = "";
+
+	generateCodes(root,str,&code_table);
+	return code_table;
+
+}
+
+void generateCodes(std::shared_ptr<HuffmanNode> root, std::string str,std::unordered_map<char , std::string> *code_table) { 
+  
+	    if (!root){
+	        return; 
+	    }
+	  
+	    if (root->data != '$') {
+
+	    	code_table->insert(std::make_pair(root->data,str));
+	    }
+	  
+	    generateCodes(root->left, str + "0",code_table); 
+	    generateCodes(root->right, str + "1",code_table); 
+}
+
+
 
