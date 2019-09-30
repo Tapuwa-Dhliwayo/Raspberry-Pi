@@ -10,5 +10,6 @@
 #define _CLOGGER_H_
 
 void clogger(std::string filename, rawData_t* data, sensorValue_t* processed);
+void compress(std::string filename);
 
 #endif
