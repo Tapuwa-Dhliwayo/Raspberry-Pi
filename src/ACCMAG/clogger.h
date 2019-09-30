@@ -11,5 +11,7 @@
 
 void clogger(std::string filename, rawData_t* data, sensorValue_t* processed);
 void compress(std::string filename);
+//Decoder function from reconstructing original file
+void decoder(std::string filename);
 
 #endif
