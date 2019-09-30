@@ -25,9 +25,6 @@ std::string encoder(std::vector<char> charater_order, std::unordered_map<char , 
 //Generates a hdr file with code table and txt file with encoded data
 void writer(std::string output, std::string encoded_data,std::unordered_map<char , std::string> code_table);
 
-//generate code function that is used by the code() func
-void generateCodes(std::shared_ptr<HuffmanNode> root, std::string str,std::unordered_map<char , std::string> *code_table);
-
 //Node structure for building the HuffmanTree
 struct HuffmanNode{
 
@@ -91,5 +88,9 @@ public:
 	std::unordered_map<char , std::string > code();
 
 };
+
+//generate code function that is used by the code() func
+void generateCodes(std::shared_ptr<HuffmanNode> root, std::string str,std::unordered_map<char , std::string> *code_table);
+
 
 #endif

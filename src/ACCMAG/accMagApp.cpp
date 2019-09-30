@@ -2,7 +2,7 @@
 #include <errno.h>
 #include <unistd.h>
 #include "clogger.h"
-#include "accMagGyroSensor.h" //FXOS8700 and FXAS21002 definitions required for setting up the sensor
+//#include "accMagGyroSensor.h" //FXOS8700 and FXAS21002 definitions required for setting up the sensor
 #include <pigpio.h>
 
 using namespace std;
@@ -32,7 +32,7 @@ int main(){
 	gpioTerminate();
 
 	clogger("testing",&accel_raw,&accel_values);
-	
+	compress("testing");
 	
 	
 	/*
