@@ -1,6 +1,10 @@
 //Sensor Library for FXOS8700 and FXAS21002 sensors(IMU)
 
 #include <stdint.h>
+#include <pigpio.h>
+#include <iostream>
+#include <errno.h>
+#include <unistd.h>
 
 #ifndef _ACCMAGGYROSENSOR_H_
 #define _ACCMAGGRYOSENSOR_H_
@@ -103,6 +107,8 @@ typedef enum
       GYRO_RANGE_2000DPS = 2000     /**< 2000dps */
     } gyroRange_t;
 
+
+//Function declarations
 void accel_function(int sensitivity, rawData_t* data1, rawData_t* data2, sensorValue_t* processed1, sensorValue_t* processed2 );
 void gyro_function(int sensitivity, rawData_t* data, sensorValue_t* processed);
 
