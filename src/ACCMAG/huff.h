@@ -87,6 +87,9 @@ public:
 	//Generates the code table for the tree
 	std::unordered_map<char , std::string > code();
 
+	//Provides the minHeap for the tree
+	std::priority_queue<std::shared_ptr<HuffmanNode>, std::vector<std::shared_ptr<HuffmanNode>>, compare> getHeap();
+
 };
 
 //generate code function that is used by the code() func

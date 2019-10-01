@@ -53,17 +53,34 @@ void decoder(std::string filename){
 		}
 	}
 	file.close();
-	
+
 	std::ifstream file2(filename);
 	std::string encoded_data;
 	std::getline(file2,encoded_data);
 	file2.close();
-	
+
+	writer("Checking",encoded_data,freq_table);
+
 	HuffmanTree tree(freq_table);
-	
+	std::priority_queue<std::shared_ptr<HuffmanNode>, std::vector<std::shared_ptr<HuffmanNode>>,compare> minHeap = tree.getHeap();
+	std::shared_ptr<HuffmanNode> root = minHeap.top();
+	std::shared_ptr<HuffmanNode> curr = root;
+	std::string ans = "";
 	for(int i = 0; i < encoded_data.size(); i++){
-		
+
+		if(encoded_data[i] == '0'){
+			curr = curr->left;
+		}
+		else{
+			curr = curr->right;
+		}
+		//Reach the leaf
+		if(curr->left==NULL && curr->right==NULL){
+
+			ans += curr->data;
+			curr = root;
+		}
 	}
-	
+	std::cout<<ans<<std::endl;
 }
 

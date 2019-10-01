@@ -199,6 +199,11 @@ std::unordered_map<char , std::string > HuffmanTree::code(){
 
 }
 
+std::priority_queue<std::shared_ptr<HuffmanNode>, std::vector<std::shared_ptr<HuffmanNode>>,compare> HuffmanTree::getHeap(){
+
+	return this->minHeap;
+}
+
 void generateCodes(std::shared_ptr<HuffmanNode> root, std::string str,std::unordered_map<char , std::string> *code_table) { 
   
 	    if (!root){
