@@ -66,7 +66,7 @@ public:
 	//Default empty
 	HuffmanTree();
 	//Default with intialisation values from unordered_map
-	HuffmanTree(std::unordered_map<char,int> table);
+	HuffmanTree(std::map<char,int> table);
 	//Copy constructor
 	HuffmanTree(const HuffmanTree & H);
 	//Move constructor
