@@ -1,4 +1,5 @@
 //Logging function utilising huffman algorithm for compression
+//Sorted
 
 #include "clogger.h"
 
