@@ -31,9 +31,9 @@ std::vector<char> char_reader(std::string input){
 	return characters;
 }
 
-std::unordered_map<char, int> freq_generator(std::vector<char> characters){
+std::map<char, int> freq_generator(std::vector<char> characters){
 
-	std::unordered_map<char , int> freq_table;
+	std::map<char , int> freq_table;
 
 	auto ref = characters.begin();
 	int count = 0;
@@ -79,7 +79,7 @@ std::string encoder(std::vector<char> charater_order, std::unordered_map<char , 
 
 }
 
-void writer(std::string output, std::string encoded_data, std::unordered_map<char , int> freq_table){
+void writer(std::string output, std::string encoded_data, std::map<char , int> freq_table){
 
 	int len = encoded_data.length();
 	char buffer[len + 1];
@@ -106,7 +106,7 @@ void writer(std::string output, std::string encoded_data, std::unordered_map<cha
 //Huffman Tree implementation
 HuffmanTree::HuffmanTree(){};
 
-HuffmanTree::HuffmanTree(std::unordered_map<char,int> table){
+HuffmanTree::HuffmanTree(std::map<char,int> table){
 
 	std::shared_ptr<HuffmanNode> left;
 	std::shared_ptr<HuffmanNode> right;
