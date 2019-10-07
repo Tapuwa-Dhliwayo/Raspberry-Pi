@@ -14,7 +14,7 @@
 #define SENSOR2                     0x21 //FXAS21002
 #define SENSOR2_ID                  0xD7 //FXAS21002 ID
 
-//Sensor value scaling constants
+//Sensor value scaling constants (Processing raw data to actual information)
 #define ACCEL_MG_LSB_2G 	    0.000244F
 #define ACCEL_MG_LSB_4G 	    0.000488F
 #define ACCEL_MG_LSB_8G             0.000976F
@@ -25,10 +25,6 @@
 #define GYRO_SENSITIVITY_1000DPS    0.03125F
 #define GYRO_SENSITIVITY_2000DPS    0.0625F
 #define SENSORS_DPS_TO_RADS         0.017453293F
-
-//Function definitions
-void accel_function();
-void gyro_function();
 
 //Registers for the FXOS8700 Sensor 1
 typedef enum
@@ -67,14 +63,14 @@ typedef enum
       ACCEL_RANGE_8G                    = 0x02  /**< +/- 8g range */
     } fxos8700AccelRange_t;
 
-//GYROSCOPE Raw data struct
+//Raw data struct
 typedef struct
     {
       int16_t x;    /**< Raw int16_t value from the x axis */
       int16_t y;    /**< Raw int16_t value from the y axis */
       int16_t z;    /**< Raw int16_t value from the z axis */
     } rawData_t;
-//GYROSCOPE Raw data struct
+//Processed data struct
 typedef struct
     {
       float x;    /**< Raw int16_t value from the x axis */

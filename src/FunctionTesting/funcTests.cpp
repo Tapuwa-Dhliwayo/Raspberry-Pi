@@ -45,12 +45,8 @@ TEST_CASE( "Huff.h : freq_generator Tests - Checking that function generates the
 TEST_CASE("Huff.h : char_reader Tests - Checking that function reads in txt files and stores them correctly"){
 
 	std::vector<char> control = {'a','b','c','d','e','f'};
-	std::vector<char> generatored = char_reader("/home/pi/TestingSensors/src/FunctionTesting/test_file");
+	std::vector<char> generatored = char_reader("/home/pi/TestingSensors/src/FunctionTesting/Unit_test_folder/test_file");
 
-	SECTION("Checking that character sizes match"){
-
-		REQUIRE(control.size() == generatored.size());
-	}
 	SECTION("Checking that characters between read in vector and control match"){
 
 		REQUIRE(control.at(0) == generatored.at(0));

@@ -23,7 +23,7 @@ std::vector<char> char_reader(std::string input){
 		file >> std::noskipws;
 		file>>hold;
 		characters.push_back(hold);
-		std::cout<<hold<<std::endl;
+		//std::cout<<hold<<std::endl;
 	}
 
 	file.close();
