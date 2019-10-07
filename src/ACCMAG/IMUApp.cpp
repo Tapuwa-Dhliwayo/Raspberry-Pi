@@ -2,7 +2,6 @@
 #include <errno.h>
 #include <unistd.h>
 #include "clogger.h"
-//#include "accMagGyroSensor.h" //FXOS8700 and FXAS21002 definitions required for setting up the sensor
 #include <pigpio.h>
 
 using namespace std;
@@ -23,7 +22,7 @@ int main(){
 	cin >> acc >> gyro;
 	*/
 	cout <<"Accel Sensitivity: " << acc << " Gyro Sensitivity: " << gyro << endl;
-	/*
+	
 	gpioCfgSetInternals(1<<10);
 	gpioInitialise();
 
@@ -33,7 +32,7 @@ int main(){
 	gpioTerminate();
 
 	clogger("testing",&accel_raw,&accel_values);
-	*/compress("testing");
+	compress("testing");
 	
 	decoder("testing_compressed");
 	/*

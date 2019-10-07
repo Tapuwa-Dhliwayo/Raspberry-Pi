@@ -1,10 +1,11 @@
 //Function definitions for Custom logging Application
 //Utilizing Huffman compression for storing logging data
 
-#include "accMagGyroSensor.h"
+#include "IMUSensor.h"
 #include "huff.h"
 #include <string>
 #include <iostream>
+#include <stdio.h>
 
 #ifndef _CLOGGER_H_
 #define _CLOGGER_H_

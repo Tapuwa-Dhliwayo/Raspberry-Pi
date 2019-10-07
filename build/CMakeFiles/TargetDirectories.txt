@@ -1,0 +1,9 @@
+/home/pi/TestingSensors/build/CMakeFiles/rebuild_cache.dir
+/home/pi/TestingSensors/build/CMakeFiles/edit_cache.dir
+/home/pi/TestingSensors/build/GPS/CMakeFiles/rebuild_cache.dir
+/home/pi/TestingSensors/build/GPS/CMakeFiles/gpsApp.dir
+/home/pi/TestingSensors/build/GPS/CMakeFiles/edit_cache.dir
+/home/pi/TestingSensors/build/ACCMAG/CMakeFiles/rebuild_cache.dir
+/home/pi/TestingSensors/build/ACCMAG/CMakeFiles/edit_cache.dir
+/home/pi/TestingSensors/build/ACCMAG/CMakeFiles/IMUApp.dir
+/home/pi/TestingSensors/build/ACCMAG/CMakeFiles/testing.dir

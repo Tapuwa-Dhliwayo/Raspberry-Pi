@@ -1,5 +1,5 @@
 
-#include "accMagGyroSensor.h" //FXOS8700 and FXAS21002 definitions required for setting up the sensor
+#include "IMUSensor.h" //FXOS8700 and FXAS21002 definitions required for setting up the sensor
 
 using namespace std;
 

@@ -6,14 +6,12 @@ endif(COMMAND cmake_policy)
 
 find_package(pigpio REQUIRED)
 
-set(EXECNAME IMUApp)
+set(EXECNAME gpsApp)
 
-SET(SRCS IMUApp.cpp IMUSensor.cpp huff.cpp clogger.cpp)
+SET(SRCS gpsApp.cpp)
 
 include_directories( ${pigpio_INCLUDE_DIRS})
 
 add_executable(${EXECNAME} ${SRCS})
-add_executable(testing testing.cpp)
 
 target_link_libraries(${EXECNAME} ${pigpio_LIBRARY})
-target_link_libraries(testing -lpthread)

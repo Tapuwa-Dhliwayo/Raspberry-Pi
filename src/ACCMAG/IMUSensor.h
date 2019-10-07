@@ -6,8 +6,8 @@
 #include <errno.h>
 #include <unistd.h>
 
-#ifndef _ACCMAGGYROSENSOR_H_
-#define _ACCMAGGRYOSENSOR_H_
+#ifndef _IMUSENSOR_H_
+#define _IMUSENSOR_H_
 
 #define SENSOR1 		    0x1F //FXOS8700
 #define SENSOR1_ID                  0xC7 //FXOS8700 ID
