@@ -14,7 +14,7 @@ std::vector<char> char_reader(std::string input){
 	file.open(input);
 
 	if(!file){
-		std::cout<<"File could not be opened."<<std::endl;
+		std::cout<<"File:"<<input<<" could not be opened."<<std::endl;
 	}
 	//Writes charatcers in the file into the char vector doesn't ignore white spaces tabs and newlines and generates a continuous stream of text as a vector of chars
 	std::vector<char> characters;
@@ -23,7 +23,7 @@ std::vector<char> char_reader(std::string input){
 		file >> std::noskipws;
 		file>>hold;
 		characters.push_back(hold);
-
+		std::cout<<hold<<std::endl;
 	}
 
 	file.close();

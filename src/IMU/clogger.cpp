@@ -20,7 +20,7 @@ void clogger(std::string filename, rawData_t* data, sensorValue_t* processed){
 }
 
 void compress(std::string filename){
-	
+
 	std::vector<char> char_vector = char_reader(filename);
 	std::map<char, int> freq_table = freq_generator(char_vector);
 	HuffmanTree tree(freq_table);

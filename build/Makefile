@@ -133,7 +133,7 @@ IMUApp: cmake_check_build_system
 
 # fast build rule for target.
 IMUApp/fast:
-	$(MAKE) -f ACCMAG/CMakeFiles/IMUApp.dir/build.make ACCMAG/CMakeFiles/IMUApp.dir/build
+	$(MAKE) -f IMU/CMakeFiles/IMUApp.dir/build.make IMU/CMakeFiles/IMUApp.dir/build
 .PHONY : IMUApp/fast
 
 #=============================================================================
@@ -146,8 +146,21 @@ testing: cmake_check_build_system
 
 # fast build rule for target.
 testing/fast:
-	$(MAKE) -f ACCMAG/CMakeFiles/testing.dir/build.make ACCMAG/CMakeFiles/testing.dir/build
+	$(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/build
 .PHONY : testing/fast
+
+#=============================================================================
+# Target rules for targets named funcTests
+
+# Build rule for target.
+funcTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 funcTests
+.PHONY : funcTests
+
+# fast build rule for target.
+funcTests/fast:
+	$(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/build
+.PHONY : funcTests/fast
 
 # Help Target
 help:
@@ -160,6 +173,7 @@ help:
 	@echo "... gpsApp"
 	@echo "... IMUApp"
 	@echo "... testing"
+	@echo "... funcTests"
 .PHONY : help
 
 

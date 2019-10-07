@@ -11,4 +11,5 @@ CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
 
 add_subdirectory(GPS)
-add_subdirectory(ACCMAG)
+add_subdirectory(IMU)
+add_subdirectory(FunctionTesting)

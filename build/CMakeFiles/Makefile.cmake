@@ -10,9 +10,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.13.4/CMakeCCompiler.cmake"
   "CMakeFiles/3.13.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.13.4/CMakeSystem.cmake"
-  "/home/pi/TestingSensors/src/ACCMAG/CMakeLists.txt"
   "/home/pi/TestingSensors/src/CMakeLists.txt"
+  "/home/pi/TestingSensors/src/FunctionTesting/CMakeLists.txt"
   "/home/pi/TestingSensors/src/GPS/CMakeLists.txt"
+  "/home/pi/TestingSensors/src/IMU/CMakeLists.txt"
   "/home/pi/TestingSensors/src/cmake/Findpigpio.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeCXXInformation.cmake"
@@ -45,12 +46,14 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "GPS/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "ACCMAG/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "IMU/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "FunctionTesting/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "GPS/CMakeFiles/gpsApp.dir/DependInfo.cmake"
-  "ACCMAG/CMakeFiles/IMUApp.dir/DependInfo.cmake"
-  "ACCMAG/CMakeFiles/testing.dir/DependInfo.cmake"
+  "IMU/CMakeFiles/IMUApp.dir/DependInfo.cmake"
+  "IMU/CMakeFiles/testing.dir/DependInfo.cmake"
+  "FunctionTesting/CMakeFiles/funcTests.dir/DependInfo.cmake"
   )

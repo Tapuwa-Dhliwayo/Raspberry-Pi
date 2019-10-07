@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/TestingSensors/src/IMU/huff.cpp
+huff.h
+/home/pi/TestingSensors/src/IMU/huff.h
+
+/home/pi/TestingSensors/src/IMU/huff.h
+iostream
+-
+memory
+-
+queue
+-
+string
+-
+fstream
+-
+unordered_map
+-
+bits/stdc++.h
+-
+
