@@ -6,13 +6,18 @@ endif(COMMAND cmake_policy)
 
 find_package(pigpio REQUIRED)
 
-set(EXECNAME funcTests)
+set(EXECNAME1 unitTests)
+set(EXECNAME2 funcTests)
 
-SET(SRCS funcTests.cpp ../IMU/IMUSensor.cpp ../IMU/huff.cpp ../IMU/clogger.cpp)
+set(SRCS1 unitTests.cpp ../IMU/huff.cpp)
+set(SRCS2 funcTests.cpp ../IMU/IMUSensor.cpp ../IMU/huff.cpp ../IMU/clogger.cpp)
 
 include_directories( ${pigpio_INCLUDE_DIRS})
 
-add_executable(${EXECNAME} ${SRCS})
+add_executable(${EXECNAME1} ${SRCS1})
 
-target_link_libraries(${EXECNAME} ${pigpio_LIBRARY})
+target_link_libraries(${EXECNAME1} ${pigpio_LIBRARY})
 
+add_executable(${EXECNAME2} ${SRCS2})
+
+target_link_libraries(${EXECNAME2} ${pigpio_LIBRARY})

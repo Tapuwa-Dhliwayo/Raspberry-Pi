@@ -194,6 +194,33 @@ IMUSensor.cpp.s:
 	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/IMUApp.dir/build.make IMU/CMakeFiles/IMUApp.dir/IMUSensor.cpp.s
 .PHONY : IMUSensor.cpp.s
 
+arduino.o: arduino.cpp.o
+
+.PHONY : arduino.o
+
+# target to build an object file
+arduino.cpp.o:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/arduino.cpp.o
+.PHONY : arduino.cpp.o
+
+arduino.i: arduino.cpp.i
+
+.PHONY : arduino.i
+
+# target to preprocess a source file
+arduino.cpp.i:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/arduino.cpp.i
+.PHONY : arduino.cpp.i
+
+arduino.s: arduino.cpp.s
+
+.PHONY : arduino.s
+
+# target to generate assembly for a file
+arduino.cpp.s:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/arduino.cpp.s
+.PHONY : arduino.cpp.s
+
 clogger.o: clogger.cpp.o
 
 .PHONY : clogger.o
@@ -248,32 +275,32 @@ huff.cpp.s:
 	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/IMUApp.dir/build.make IMU/CMakeFiles/IMUApp.dir/huff.cpp.s
 .PHONY : huff.cpp.s
 
-testing.o: testing.cpp.o
+rs232.o: rs232.c.o
 
-.PHONY : testing.o
+.PHONY : rs232.o
 
 # target to build an object file
-testing.cpp.o:
-	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/testing.cpp.o
-.PHONY : testing.cpp.o
+rs232.c.o:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/rs232.c.o
+.PHONY : rs232.c.o
 
-testing.i: testing.cpp.i
+rs232.i: rs232.c.i
 
-.PHONY : testing.i
+.PHONY : rs232.i
 
 # target to preprocess a source file
-testing.cpp.i:
-	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/testing.cpp.i
-.PHONY : testing.cpp.i
+rs232.c.i:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/rs232.c.i
+.PHONY : rs232.c.i
 
-testing.s: testing.cpp.s
+rs232.s: rs232.c.s
 
-.PHONY : testing.s
+.PHONY : rs232.s
 
 # target to generate assembly for a file
-testing.cpp.s:
-	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/testing.cpp.s
-.PHONY : testing.cpp.s
+rs232.c.s:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f IMU/CMakeFiles/testing.dir/build.make IMU/CMakeFiles/testing.dir/rs232.c.s
+.PHONY : rs232.c.s
 
 # Help Target
 help:
@@ -291,15 +318,18 @@ help:
 	@echo "... IMUSensor.o"
 	@echo "... IMUSensor.i"
 	@echo "... IMUSensor.s"
+	@echo "... arduino.o"
+	@echo "... arduino.i"
+	@echo "... arduino.s"
 	@echo "... clogger.o"
 	@echo "... clogger.i"
 	@echo "... clogger.s"
 	@echo "... huff.o"
 	@echo "... huff.i"
 	@echo "... huff.s"
-	@echo "... testing.o"
-	@echo "... testing.i"
-	@echo "... testing.s"
+	@echo "... rs232.o"
+	@echo "... rs232.i"
+	@echo "... rs232.s"
 .PHONY : help
 
 

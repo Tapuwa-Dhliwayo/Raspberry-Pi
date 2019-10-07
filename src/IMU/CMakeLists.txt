@@ -13,7 +13,7 @@ SET(SRCS IMUApp.cpp IMUSensor.cpp huff.cpp clogger.cpp)
 include_directories( ${pigpio_INCLUDE_DIRS})
 
 add_executable(${EXECNAME} ${SRCS})
-add_executable(testing testing.cpp)
+add_executable(testing arduino.cpp rs232.c)
 
 target_link_libraries(${EXECNAME} ${pigpio_LIBRARY})
 target_link_libraries(testing -lpthread)

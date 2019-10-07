@@ -12,7 +12,6 @@ FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/clogger.cpp.o: /home/pi/TestingS
 FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/huff.cpp.o: /home/pi/TestingSensors/src/IMU/huff.cpp
 FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/huff.cpp.o: /home/pi/TestingSensors/src/IMU/huff.h
 
-FunctionTesting/CMakeFiles/funcTests.dir/funcTests.cpp.o: /home/pi/TestingSensors/src/FunctionTesting/catch.hpp
 FunctionTesting/CMakeFiles/funcTests.dir/funcTests.cpp.o: /home/pi/TestingSensors/src/FunctionTesting/funcTests.cpp
 FunctionTesting/CMakeFiles/funcTests.dir/funcTests.cpp.o: /home/pi/TestingSensors/src/IMU/IMUSensor.h
 FunctionTesting/CMakeFiles/funcTests.dir/funcTests.cpp.o: /home/pi/TestingSensors/src/IMU/clogger.h

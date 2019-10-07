@@ -150,6 +150,19 @@ testing/fast:
 .PHONY : testing/fast
 
 #=============================================================================
+# Target rules for targets named unitTests
+
+# Build rule for target.
+unitTests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 unitTests
+.PHONY : unitTests
+
+# fast build rule for target.
+unitTests/fast:
+	$(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/build
+.PHONY : unitTests/fast
+
+#=============================================================================
 # Target rules for targets named funcTests
 
 # Build rule for target.
@@ -173,6 +186,7 @@ help:
 	@echo "... gpsApp"
 	@echo "... IMUApp"
 	@echo "... testing"
+	@echo "... unitTests"
 	@echo "... funcTests"
 .PHONY : help
 

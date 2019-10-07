@@ -6,15 +6,41 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/TestingSensors/src/IMU/testing.cpp
-iostream
+/home/pi/TestingSensors/src/IMU/arduino.cpp
+stdlib.h
 -
-thread
+stdio.h
 -
 unistd.h
 -
-mutex
+iostream
 -
-condition_variable
+rs232.h
+/home/pi/TestingSensors/src/IMU/rs232.h
+
+/home/pi/TestingSensors/src/IMU/rs232.h
+stdio.h
+-
+string.h
+-
+termios.h
+-
+sys/ioctl.h
+-
+unistd.h
+-
+fcntl.h
+-
+sys/types.h
+-
+sys/stat.h
+-
+limits.h
+-
+sys/file.h
+-
+errno.h
+-
+windows.h
 -
 

@@ -8,5 +8,6 @@
 /home/pi/TestingSensors/build/IMU/CMakeFiles/IMUApp.dir
 /home/pi/TestingSensors/build/IMU/CMakeFiles/testing.dir
 /home/pi/TestingSensors/build/FunctionTesting/CMakeFiles/rebuild_cache.dir
-/home/pi/TestingSensors/build/FunctionTesting/CMakeFiles/funcTests.dir
 /home/pi/TestingSensors/build/FunctionTesting/CMakeFiles/edit_cache.dir
+/home/pi/TestingSensors/build/FunctionTesting/CMakeFiles/unitTests.dir
+/home/pi/TestingSensors/build/FunctionTesting/CMakeFiles/funcTests.dir

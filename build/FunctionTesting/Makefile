@@ -111,6 +111,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+FunctionTesting/CMakeFiles/unitTests.dir/rule:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f CMakeFiles/Makefile2 FunctionTesting/CMakeFiles/unitTests.dir/rule
+.PHONY : FunctionTesting/CMakeFiles/unitTests.dir/rule
+
+# Convenience name for target.
+unitTests: FunctionTesting/CMakeFiles/unitTests.dir/rule
+
+.PHONY : unitTests
+
+# fast build rule for target.
+unitTests/fast:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/build
+.PHONY : unitTests/fast
+
+# Convenience name for target.
 FunctionTesting/CMakeFiles/funcTests.dir/rule:
 	cd /home/pi/TestingSensors/build && $(MAKE) -f CMakeFiles/Makefile2 FunctionTesting/CMakeFiles/funcTests.dir/rule
 .PHONY : FunctionTesting/CMakeFiles/funcTests.dir/rule
@@ -185,6 +200,7 @@ __/IMU/huff.o: __/IMU/huff.cpp.o
 
 # target to build an object file
 __/IMU/huff.cpp.o:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/__/IMU/huff.cpp.o
 	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/huff.cpp.o
 .PHONY : __/IMU/huff.cpp.o
 
@@ -194,6 +210,7 @@ __/IMU/huff.i: __/IMU/huff.cpp.i
 
 # target to preprocess a source file
 __/IMU/huff.cpp.i:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/__/IMU/huff.cpp.i
 	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/huff.cpp.i
 .PHONY : __/IMU/huff.cpp.i
 
@@ -203,6 +220,7 @@ __/IMU/huff.s: __/IMU/huff.cpp.s
 
 # target to generate assembly for a file
 __/IMU/huff.cpp.s:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/__/IMU/huff.cpp.s
 	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/__/IMU/huff.cpp.s
 .PHONY : __/IMU/huff.cpp.s
 
@@ -233,6 +251,33 @@ funcTests.cpp.s:
 	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/funcTests.dir/build.make FunctionTesting/CMakeFiles/funcTests.dir/funcTests.cpp.s
 .PHONY : funcTests.cpp.s
 
+unitTests.o: unitTests.cpp.o
+
+.PHONY : unitTests.o
+
+# target to build an object file
+unitTests.cpp.o:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/unitTests.cpp.o
+.PHONY : unitTests.cpp.o
+
+unitTests.i: unitTests.cpp.i
+
+.PHONY : unitTests.i
+
+# target to preprocess a source file
+unitTests.cpp.i:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/unitTests.cpp.i
+.PHONY : unitTests.cpp.i
+
+unitTests.s: unitTests.cpp.s
+
+.PHONY : unitTests.s
+
+# target to generate assembly for a file
+unitTests.cpp.s:
+	cd /home/pi/TestingSensors/build && $(MAKE) -f FunctionTesting/CMakeFiles/unitTests.dir/build.make FunctionTesting/CMakeFiles/unitTests.dir/unitTests.cpp.s
+.PHONY : unitTests.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,8 +285,9 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... funcTests"
 	@echo "... edit_cache"
+	@echo "... unitTests"
+	@echo "... funcTests"
 	@echo "... __/IMU/IMUSensor.o"
 	@echo "... __/IMU/IMUSensor.i"
 	@echo "... __/IMU/IMUSensor.s"
@@ -254,6 +300,9 @@ help:
 	@echo "... funcTests.o"
 	@echo "... funcTests.i"
 	@echo "... funcTests.s"
+	@echo "... unitTests.o"
+	@echo "... unitTests.i"
+	@echo "... unitTests.s"
 .PHONY : help
 
 

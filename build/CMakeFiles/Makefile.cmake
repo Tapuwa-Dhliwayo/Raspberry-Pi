@@ -55,5 +55,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "GPS/CMakeFiles/gpsApp.dir/DependInfo.cmake"
   "IMU/CMakeFiles/IMUApp.dir/DependInfo.cmake"
   "IMU/CMakeFiles/testing.dir/DependInfo.cmake"
+  "FunctionTesting/CMakeFiles/unitTests.dir/DependInfo.cmake"
   "FunctionTesting/CMakeFiles/funcTests.dir/DependInfo.cmake"
   )
