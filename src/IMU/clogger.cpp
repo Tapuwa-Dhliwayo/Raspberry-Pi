@@ -26,7 +26,7 @@ void compress(std::string filename){
 	HuffmanTree tree(freq_table);
 	std::unordered_map<char , std::string > code_table = tree.code();
 	std::string encoded_data = encoder(char_vector,code_table);
-	writer(filename+"_compressed",encoded_data,freq_table);
+	writer(filename,encoded_data,freq_table);
 	if(std::remove((filename+".txt").c_str()) != 0){
 		perror("Error deleting file");
 	}
@@ -70,6 +70,9 @@ void decoder(std::string filename){
 	std::priority_queue<std::shared_ptr<HuffmanNode>, std::vector<std::shared_ptr<HuffmanNode>>,compare> minHeap = tree.getHeap();
 	std::shared_ptr<HuffmanNode> root = minHeap.top();
 	std::shared_ptr<HuffmanNode> curr = root;
+
+	std::ofstream decodedfile;
+	decodedfile.open(filename+"_decoded.txt");
 	std::string ans = "";
 	for(int i = 0; i < encoded_data.size(); i++){
 
@@ -86,6 +89,7 @@ void decoder(std::string filename){
 			curr = root;
 		}
 	}
-	std::cout<<ans<<std::endl;
+	decodedfile<<ans;
+	decodedfile.close();
 }
 

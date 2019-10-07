@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/pi/TestingSensors/src/IMU/IMUApp.cpp
-iostream
--
-errno.h
--
-unistd.h
--
-clogger.h
-/home/pi/TestingSensors/src/IMU/clogger.h
-pigpio.h
--
-
-/home/pi/TestingSensors/src/IMU/IMUSensor.cpp
-IMUSensor.h
-/home/pi/TestingSensors/src/IMU/IMUSensor.h
-
 /home/pi/TestingSensors/src/IMU/IMUSensor.h
 stdint.h
 -
